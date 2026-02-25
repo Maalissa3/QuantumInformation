@@ -16,7 +16,7 @@
 \begin{itemize}
     \item \textbf{Ideal Gas Law:} $PV = Nk_BT = nRT$
     \item \textbf{First Law (Finite):} $\Delta U = \Delta Q - \Delta W$
-    \item \textbf{First Law (Infinitesimal):} $dU = \delta Q - \delta W$
+    \item \textbf{First Law (Infinitesimal):} $dU = \delta Q - \delta W = TdS - PdV= dU = \sum_j \epsilon_j dn_j + \sum_j n_j d\epsilon_j$
     \item \textbf{Work:} $dW = PdV$
     \item \textbf{Heat Capacity:} $\Delta Q = C \Delta T$
 \end{itemize}
@@ -25,23 +25,22 @@
 \begin{itemize}
     \item \textbf{Work in Cycle:} $W = Q_2 - Q_1$
     \item \textbf{Engine Efficiency:} $\eta = \frac{W}{Q_2} = 1 - \frac{Q_1}{Q_2}$
-    \item \textbf{Clausius Theorem:} $\oint \frac{dQ}{T} \leq 0$
+    \item \textbf{Clausius Theorem:} $\oint \frac{dQ}{T} \leq 0$; if equal then reversible
 \end{itemize}
 
 \subsection*{Macroscopic Entropy}
 \begin{itemize}
-    \item \textbf{Entropy Change (Reversible):} $\Delta S = \int_{rev} \frac{dQ}{T}$
-    \item \textbf{Third Law:} $S = 0$ at $T = 0$
-\end{itemize}
-
-\subsection*{Statistical Mechanics}
-\begin{itemize}
-    \item \textbf{Multiplicity:} $t(\{n_j\}) = \frac{N!}{\prod_j n_j!} \prod_j g_j^{n_j}$
-    \item \textbf{Stirling's Approximation:} $\ln n! \approx n \ln n - n$
+    \item \textbf{Entropy Change (Reversible, from Clausius):} $\Delta S = \int^{A}_{B;rev} \frac{dQ}{T}\leq S(A)-S(B)$
+    \item \textbf{Third Law:} $S = 0$ at $T = 0$; $S(A)=\int_{0}^{T_{A}} C_{R}\frac{dT}{T}$; $S(A)\rightarrow 0$ as $T_A \rightarrow 0$
 \end{itemize}
 
 \subsection*{Boltzmann Distribution}
 \begin{itemize}
+    \item \textbf{Internal Energy:} $U = \sum_j n_j \epsilon_j$
+    \item \textbf{Total Particles:} $N = \sum_j n_j=A\sum_j \exp(\beta \epsilon_j)$
+    \item \textbf{Multiplicity:} $t(\{n_j\}) = \frac{N!}{\prod_j n_j!} \prod_j g_j^{n_j} \varpropto \Omega \{n_{j}\}$
+    \item \textbf{Stirling's Approximation:} $\ln n! \approx n \ln n - n$
+    \item \textbf{Boltzmann Distribution:} $n_j^* = \frac{N}{Z} \exp(\beta \epsilon_j)=\exp(\alpha+\beta\epsilon_j)$
     \item \textbf{Partition Function:} $Z = \sum_j \exp(\beta \epsilon_j)$
     \item \textbf{Occupation Numbers:} $n_j = \frac{N}{Z} \exp(\beta \epsilon_j)$
     \item \textbf{Lagrange Multiplier:} $\beta = -\frac{1}{k_BT}$
@@ -49,14 +48,12 @@
 
 \subsection*{Microscopic Entropy}
 \begin{itemize}
-    \item \textbf{Boltzmann Entropy:} $S = k_B \ln \Omega$
-    \item \textbf{Gibbs Entropy:} $S = -k_B \sum_{j=1}^m P_j \ln P_j$
-    \item \textbf{Fundamental Relation:} $dU = TdS - PdV$
+    \item \textbf{Boltzmann Entropy:} $S = k_B \ln \Omega= -\beta T \ln(\Omega)$
+    \item \textbf{Gibbs Entropy:} $S = -k_B \sum_{j=1}^m P_j \ln P_j$; $P_j = \frac{n_j}{N}$
 \end{itemize}
 
 \subsection*{Energy Decomposition}
 \begin{itemize}
-    \item \textbf{Energy Change:} $dU = \sum_j \epsilon_j dn_j + \sum_j n_j d\epsilon_j$
     \item \textbf{Heat Component:} $\sum_j \epsilon_j dn_j$ (redistribution of particles)
     \item \textbf{Work Component:} $\sum_j n_j d\epsilon_j$ (shifting energy levels)
 \end{itemize}
