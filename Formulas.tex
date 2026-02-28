@@ -66,5 +66,44 @@
     \item \textbf{Gaussian Solution:} $P(x,t) = \frac{1}{\sqrt{4\pi Dt}} \exp\left(-\frac{x^2}{4Dt}\right)$
     \item \textbf{Resulting Entropy:} $S(t) \sim \log(4\pi Dt)$ (grows logarithmically with time)
 \end{itemize}
+\newpage
+\section{Lecture 2}
+\subsection*{Fundamental Measures of Information}
+\begin{itemize}
+    \item \textbf{Information Measure:} $f(N) = K \log N$ for $N$ equally likely messages
+    \item \textbf{Information Units:} Base 2 (bits), Base 10 (dits/Hartleys), Base $e$ (nats), Base 256 (bytes)
+    \item \textbf{Change of Base:} Multiply by $\log_b a$ to convert from base $a$ to base $b$
+\end{itemize}
 
-\end{document}e
+\subsection*{Discrete Noiseless Channel Capacity}
+\begin{itemize}
+    \item \textbf{Basic Teletype Capacity:} $H = \log_2 N$ (bits per symbol)
+    \item \textbf{General Channel Capacity:} $C = \lim_{T \to \infty} \frac{\log N(T)}{T}$
+    \item \textbf{Varying Symbol Durations:} $X^{-t_1} + X^{-t_2} + \dots + X^{-t_n} = 1$; $C = \log X_0$
+    \item \textbf{State Constraints:} $\left| \sum_s W^{-b_{ij}^{(s)}} - \delta_{ij} \right| = 0$; $C = \log W$
+\end{itemize}
+
+\subsection*{Stochastic Sources and Probabilities}
+\begin{itemize}
+    \item \textbf{Equilibrium Conditions:} $P_j = \sum_i P_i p_i(j)$
+    \item \textbf{Joint and Transition:} $p(i, j) = p(i)p_i(j)$
+    \item \textbf{Marginal Probability:} $p(i) = \sum_j p(i, j) = \sum_j p(j)p_j(i)$
+\end{itemize}
+
+\subsection*{Shannon Entropy}
+\begin{itemize}
+    \item \textbf{General Entropy:} $H = -K \sum_{i=1}^n p_i \log p_i$
+    \item \textbf{Binary Case:} $H = -(p \log p + q \log q)$
+    \item \textbf{Recursive Rule:} $H(p_1, \dots, p_N) = H(z_1, \dots, z_M) + \sum z_i H(d_{i,1}, \dots, d_{i,r_i})$
+\end{itemize}
+
+\subsection*{Joint and Conditional Entropy}
+\begin{itemize}
+    \item \textbf{Joint Entropy:} $H(x, y) = -\sum_{i,j} p(i, j) \log p(i, j)$
+    \item \textbf{Conditional Entropy:} $H_x(y) = -\sum_{i,j} p(i, j) \log p_i(j)$
+    \item \textbf{Chain Rule:} $H(x, y) = H(x) + H_x(y)$
+    \item \textbf{Independence:} $H(x, y) \leq H(x) + H(y)$ (equality if independent)
+    \item \textbf{Information Non-increase:} $H(y) \geq H_x(y)$
+\end{itemize}
+
+\end{document}
